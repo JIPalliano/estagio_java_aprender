@@ -9,6 +9,7 @@ public class Main {
             //int x = 1000000000;
             //"Aceita números de até 10 unidades decimais.
             //long x = 1000000000;
+        //olha
         int x = 2_147_483_647;
         System.out.println(x);
     }
