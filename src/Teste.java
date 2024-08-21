@@ -5,6 +5,22 @@ public class Teste {
     private int doors;
     private boolean convertible;
 
+    public Teste(String make, String model, String color, int doors, boolean convertible){
+        this.make=make;
+        this.model=model;
+        this.color=color;
+        this.doors=doors;
+        this.convertible=convertible;
+        //descricaoCarro();
+    }
+    public String toString() {
+        return doors + "-Door " +
+                color + " " +
+                make + " " +
+                model + " " +
+                (convertible ? "convertible": "");
+    }
+
     public String getMake(){
         return make;
     }
@@ -36,11 +52,11 @@ public class Teste {
         this.convertible = convertible ;
     }
 
-    public void descricaoCarro(){
-        System.out.println(doors + "-Door " +
-                color + " " +
-                make + " " +
-                model + " " +
-                (convertible ? "convertible": ""));
-    }
+    //public void descricaoCarro(){
+        //System.out.println(doors + "-Door " +
+                //color + " " +
+                //make + " " +
+                //model + " " +
+                //(convertible ? "convertible": ""));
+    //}
 }

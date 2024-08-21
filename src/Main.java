@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import loja.*;
+
 public class Main {
     public static void main(String[] args) {
         //System.out.println("Hello and welcome!");
@@ -12,12 +15,9 @@ public class Main {
         //olha
         //int x = 2_147_483_647;
         //System.out.println(x);
-        Teste car = new Teste();
-        car.setMake("alo");
-        car.setColor("vermelho");
-        car.setModel("Pegeuot");
-        car.setDoors(4);
-        car.setConvertible(true);
-        System.out.println(car.getConvertible());
+        //Dvd cd = new Dvd();
+        System.out.println();
+
+
     }
 }
