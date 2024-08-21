@@ -10,7 +10,14 @@ public class Main {
             //"Aceita números de até 10 unidades decimais.
             //long x = 1000000000;
         //olha
-        int x = 2_147_483_647;
-        System.out.println(x);
+        //int x = 2_147_483_647;
+        //System.out.println(x);
+        Teste car = new Teste();
+        car.setMake("alo");
+        car.setColor("vermelho");
+        car.setModel("Pegeuot");
+        car.setDoors(4);
+        car.setConvertible(true);
+        System.out.println(car.getConvertible());
     }
 }
