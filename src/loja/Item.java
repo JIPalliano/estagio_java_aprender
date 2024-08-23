@@ -6,6 +6,9 @@ public abstract class Item {
     private String autor;
     private int anoPublicacao;
     private int id;
+    //metodo que vai diferenciar os tipos de cada classe filha
+    protected abstract String getTipo();
+    protected abstract String getDetalhes();
 
     //metodo construtor da classe item.
     public Item(String titulo, String autor, int anoPublicacao, int id){
@@ -41,6 +44,12 @@ public abstract class Item {
         this.id=id;
     }
 
+
+    public Boolean eVerdadeEsseBilhete(){
+        return true;
+    }
+
+    @Override
     public String toString(){
         return "Titulo do livro: "+titulo+"\n Autor do livro: "+autor
                 +"\n Ano da Publicação: "+anoPublicacao+"\n Id do livro: "+id;
