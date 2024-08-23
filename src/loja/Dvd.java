@@ -24,4 +24,15 @@ public class Dvd extends Item{
     public void setGenero(String genero){
         this.genero = genero;
     }
+
+    @Override
+    public String getTipo(){
+        return "Dvd";
+    }
+    @Override
+    public String getDetalhes(){
+        return "Titulo do livro: "+getTitulo()+"\nAutor do livro: "+getAutor()
+                +"\nDuração do filme: "+getDuracao()+"\nGênero do filme: "+getGenero()
+                +"\nAno da Publicação: "+getAnoPublicacao()+"\nId do livro: "+getId();
+    }
 }

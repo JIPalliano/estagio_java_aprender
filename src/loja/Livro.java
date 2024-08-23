@@ -19,10 +19,22 @@ public class Livro extends Item{
     public void setNumeroDePaginas(int numeroDePaginas){
         this.numeroDePaginas=numeroDePaginas;
     }
-    public String editora(String editora){
+    public String getEditora(){
         return editora;
     }
     public void setEditora(String editora){
         this.editora=editora;
+    }
+
+    //@Override esta sobrescrevendo o metodo da classe mãe, o nome do metodo tem que ser igual ao da classe mãe.
+    @Override
+    public String getTipo(){
+        return "Livro";
+    }
+    @Override
+    public String getDetalhes(){
+        return "Titulo do livro: "+getTitulo()+"\nAutor do livro: "+getAutor()
+                +"\nNúmero de páginas: "+getNumeroDePaginas()+"\nEditora: "+getEditora()
+                +"\nAno da Publicação: "+getAnoPublicacao()+"\nId do livro: "+getId();
     }
 }

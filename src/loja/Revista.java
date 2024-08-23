@@ -1,5 +1,7 @@
 package loja;
 
+import java.lang.annotation.Repeatable;
+
 public class Revista extends Item{
     //Atributos(edição, periodicidade)
     private String edicao;
@@ -26,5 +28,14 @@ public class Revista extends Item{
         this.edicao = edicao;
     }
 
-
+    @Override
+    public String getTipo(){
+        return "Revista";
+    }
+    @Override
+    public String getDetalhes(){
+        return "Titulo do livro: "+getTitulo()+"\nAutor do livro: "+getAutor()
+                +"\nEdiçao do livro: "+getEdicao()+"\nNota do livro: "+getPeridciodade()
+                +"\nAno da Publicação: "+getAnoPublicacao()+"\nId do livro: "+getId();
+    }
 }

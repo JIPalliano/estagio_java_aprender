@@ -18,9 +18,16 @@ public class Main {
         //Dvd cd = new Dvd();
         Revista revista = new Revista("teste", 4.5,"mares do bem", "fafa de belem",
                 2024, 1);
+        Dvd dvd = new Dvd(2, "Terror","mares do bem", "fafa de belem",
+                2024, 1);
+        Livro livro = new Livro(200, "darkside","mares do bem", "fafa de belem",
+                2024, 1);
         System.out.println(revista);
         revista.setAutor("Julio cocielo");
-        System.out.println(revista);
+        System.out.println(revista.eVerdadeEsseBilhete());
+        System.out.println(livro.getDetalhes());
+        System.out.println(dvd.getDetalhes());
+        System.out.println(revista.getDetalhes());
 
 
     }
