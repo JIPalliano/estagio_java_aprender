@@ -16,7 +16,11 @@ public class Main {
         //int x = 2_147_483_647;
         //System.out.println(x);
         //Dvd cd = new Dvd();
-        System.out.println();
+        Revista revista = new Revista("teste", 4.5,"mares do bem", "fafa de belem",
+                2024, 1);
+        System.out.println(revista);
+        revista.setAutor("Julio cocielo");
+        System.out.println(revista);
 
 
     }

@@ -1,12 +1,13 @@
 package loja;
 
-public class Livro {
+public class Livro extends Item{
     //Atributos(número de páginas, editora)
     private int numeroDePaginas;
     private String editora;
 
     //Metodo construtor da classe "Livro"
-    public Livro(int numeroDePaginas, String editora){
+    public Livro(int numeroDePaginas, String editora,String titulo, String autor, int anoPublicacao, int id){
+        super(titulo, autor, anoPublicacao, id);
         this.numeroDePaginas = numeroDePaginas;
         this.editora = editora;
     }
