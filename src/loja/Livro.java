@@ -4,6 +4,7 @@ public class Livro extends Item{
     //Atributos(número de páginas, editora)
     private int numeroDePaginas;
     private String editora;
+    //private boolean disponivel = true;
 
     //Metodo construtor da classe "Livro"
     public Livro(int numeroDePaginas, String editora,String titulo, String autor, int anoPublicacao, int id){
@@ -26,6 +27,8 @@ public class Livro extends Item{
         this.editora=editora;
     }
 
+
+
     //@Override esta sobrescrevendo o metodo da classe mãe, o nome do metodo tem que ser igual ao da classe mãe.
     @Override
     public String getTipo(){
@@ -33,8 +36,8 @@ public class Livro extends Item{
     }
     @Override
     public String getDetalhes(){
-        return "Titulo do livro: "+getTitulo()+"\nAutor do livro: "+getAutor()
+        return "Id do livro: "+getId()+"\nTitulo do livro: "+getTitulo()+"\nAutor do livro: "+getAutor()
                 +"\nNúmero de páginas: "+getNumeroDePaginas()+"\nEditora: "+getEditora()
-                +"\nAno da Publicação: "+getAnoPublicacao()+"\nId do livro: "+getId();
+                +"\nAno da Publicação: "+getAnoPublicacao();
     }
 }

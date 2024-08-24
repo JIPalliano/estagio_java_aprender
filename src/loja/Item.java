@@ -50,7 +50,7 @@ public abstract class Item {
         return disponivel;
     }
 
-    private void emprestado(){
+    public void emprestado(){
         if(estaDisponivel()){
             disponivel = false;
             System.out.println("Item emprestado.");
@@ -59,8 +59,8 @@ public abstract class Item {
         }
     }
 
-    private void itemDevolvido(){
-        if(estaDisponivel()){
+    public void devolvido(){
+        if(!estaDisponivel()){
             disponivel = true;
             System.out.println("Item devolvido.");
         }else{
@@ -68,9 +68,9 @@ public abstract class Item {
         }
     }
 
-    //@Override
-    //public String toString(){
-        //return "Titulo do livro: "+titulo+"\n Autor do livro: "+autor
-                //+"\n Ano da Publicação: "+anoPublicacao+"\n Id do livro: "+id;
-    //}
+    @Override
+    public String toString(){
+        return "Titulo do livro: "+titulo+"\n Autor do livro: "+autor
+                +"\n Ano da Publicação: "+anoPublicacao+"\n Id do livro: "+id;
+    }
 }
