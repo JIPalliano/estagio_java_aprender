@@ -28,7 +28,7 @@ public class Main {
         //System.out.println(livro.getDetalhes());
         //System.out.println(dvd.getDetalhes());
         System.out.println(revista.getTipo());
-        System.out.println(revista.getDetalhes());
+        System.out.println(livro.estaDisponivel());
 
 
     }
