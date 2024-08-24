@@ -22,13 +22,23 @@ public class Main {
                 2024, 1);
         Livro livro = new Livro(200, "darkside","mares do bem", "fafa de belem",
                 2024, 1);
+        Livro livro2 = new Livro(250, "Brasil","Fortnite", "epic games",
+                2022, 2);
         //System.out.println(revista);
         revista.setAutor("Julio cocielo");
         //System.out.println(revista.eVerdadeEsseBilhete());
         //System.out.println(livro.getDetalhes());
         //System.out.println(dvd.getDetalhes());
         System.out.println(revista.getTipo());
-        System.out.println(livro.estaDisponivel());
+        //System.out.println(revista.getDetalhes());
+
+        System.out.println(livro.getDetalhes());
+        System.out.println(livro2.getDetalhes());
+        //Void como não retorna nada, ele ira retornar só a string, mas não seria um retorno e sim uma saída de dado.
+        livro2.emprestado();
+        livro.emprestado();
+        //Testei também especificação de cada objeto, no caso acima chamei o metodo emprestado em dois objetos, os dois mostram que foram emprestado, logo abaixo chamei novamento o objeto e ele mostra que esta indisponivel.
+        livro2.emprestado();
 
 
     }
