@@ -7,8 +7,8 @@ public abstract class Item {
     private int anoPublicacao;
     private int id;
     //metodo que vai diferenciar os tipos de cada classe filha
-    protected abstract String getTipo();
-    protected abstract String getDetalhes();
+    abstract String getTipo();
+    abstract String getDetalhes();
 
     //metodo construtor da classe item.
     public Item(String titulo, String autor, int anoPublicacao, int id){
@@ -45,13 +45,24 @@ public abstract class Item {
     }
 
 
-    public Boolean eVerdadeEsseBilhete(){
-        return true;
+    public Boolean estaDisponivel(boolean disponivel){
+        return disponivel;
     }
 
-    @Override
-    public String toString(){
-        return "Titulo do livro: "+titulo+"\n Autor do livro: "+autor
-                +"\n Ano da Publicação: "+anoPublicacao+"\n Id do livro: "+id;
+    private void emprestado(){
+        if(estaDisponivel(true)){
+            estaDisponivel(false);
+            
+        }
     }
+
+    private void itemDevolvido(){
+
+    }
+
+    //@Override
+    //public String toString(){
+        //return "Titulo do livro: "+titulo+"\n Autor do livro: "+autor
+                //+"\n Ano da Publicação: "+anoPublicacao+"\n Id do livro: "+id;
+    //}
 }
