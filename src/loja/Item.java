@@ -6,6 +6,7 @@ public abstract class Item {
     private String autor;
     private int anoPublicacao;
     private int id;
+    private boolean disponivel = true;
     //metodo que vai diferenciar os tipos de cada classe filha
     abstract String getTipo();
     abstract String getDetalhes();
@@ -45,19 +46,26 @@ public abstract class Item {
     }
 
 
-    public Boolean estaDisponivel(boolean disponivel){
+    public Boolean estaDisponivel(){
         return disponivel;
     }
 
     private void emprestado(){
-        if(estaDisponivel(true)){
-            estaDisponivel(false);
-            
+        if(estaDisponivel()){
+            disponivel = false;
+            System.out.println("Item emprestado.");
+        }else{
+            System.out.println("Item indisponivel.");
         }
     }
 
     private void itemDevolvido(){
-
+        if(estaDisponivel()){
+            disponivel = true;
+            System.out.println("Item devolvido.");
+        }else{
+            System.out.println("Item indisponivel.");
+        }
     }
 
     //@Override
