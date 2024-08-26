@@ -31,6 +31,10 @@ public class Livro extends Item{
         return "Livro";
     }
 
+    public void getTipoItem(){
+        System.out.println(TipoItem.LIVRO);
+    }
+
     //@Override esta sobrescrevendo o metodo da classe mãe, o nome do metodo tem que ser igual ao da classe mãe.
     @Override
     public String getTipo(){

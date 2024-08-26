@@ -29,7 +29,8 @@ public class Main {
         final Integer x = 1;
         x.valueOf(4);
         System.out.println(x);
-        //System.out.println(revista);
+        System.out.println(TipoItem.LIVRO);
+        livro.getTipoItem();
         //revista.setAutor("Julio cocielo");
         //System.out.println(revista.eVerdadeEsseBilhete());
         System.out.println(livro.nomeMarca());
