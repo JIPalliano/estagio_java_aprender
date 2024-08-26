@@ -1,5 +1,7 @@
 package learning_lambda;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Arrays;
@@ -31,6 +33,8 @@ public class Main {
         System.out.println(soma.calcular(2, 3));
         Operacao subtracao = (x,y) -> x - y;
         System.out.println(subtracao.calcular(3, 2));
+        list2.stream().limit(2).forEach(System.out::println);
+        System.out.println(DateTimeFormatter.ISO_LOCAL_DATE.format(LocalDate.of(2018, 3, 9)));
 
 
 
