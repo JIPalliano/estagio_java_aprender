@@ -27,7 +27,9 @@ public class Livro extends Item{
         this.editora=editora;
     }
 
-
+    public static String nomeLivro(){
+        return "Livro";
+    }
 
     //@Override esta sobrescrevendo o metodo da classe mãe, o nome do metodo tem que ser igual ao da classe mãe.
     @Override

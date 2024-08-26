@@ -1,6 +1,6 @@
 package loja;
 //classe abstrata
-public abstract class Item {
+public abstract class Item implements InterfaceMarca{
     //Atributos (título, autor, ano de publicação, ID)
     private String titulo;
     private String autor;
@@ -11,6 +11,13 @@ public abstract class Item {
     abstract String getTipo();
     abstract String getDetalhes();
 
+    //sobrescrevendo metodo da interface, apliquei na mãe e as filhas já importaram o metodo.
+    @Override
+    public String nomeMarca() {
+        return "teste interface";
+    }
+
+
     //metodo construtor da classe item.
     public Item(String titulo, String autor, int anoPublicacao, int id){
         this.titulo = titulo;
@@ -18,6 +25,7 @@ public abstract class Item {
         this.anoPublicacao = anoPublicacao;
         this.id = id;
     }
+
 
     //metodos Getters e Setters, onde vão receber o valor e setar o valor.
     public String getTitulo(){
@@ -48,6 +56,11 @@ public abstract class Item {
 
     public Boolean estaDisponivel(){
         return disponivel;
+    }
+
+    //metodos estaticos mesmo em classes abstract conseguem ser chamadas sem estanciar a classe
+    public static String nomeItem(){
+        return "teste aqui";
     }
 
     public void emprestado(){
