@@ -1,9 +1,9 @@
 package learning_OOP;
 
-public class Wall {
+public class WallOld {
     private double width, height;
-    public Wall() {}
-    public Wall(double width, double height) {
+    public WallOld() {}
+    public WallOld(double width, double height) {
         setWidth(width);
         setHeight(height);
     }
