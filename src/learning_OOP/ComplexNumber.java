@@ -20,16 +20,14 @@ public class ComplexNumber {
         this.imaginary += imaginary;
     }
     public void add(ComplexNumber other){
-        this.real += other.real;
-        this.imaginary += other.imaginary;
+        add(other.real, other.imaginary);
     }
     public void subtract(double real, double imaginary) {
         this.real -= real;
         this.imaginary -= imaginary;
     }
     public void subtract(ComplexNumber other){
-        this.real -= other.real;
-        this.imaginary -= other.imaginary;
+        subtract(other.real, other.imaginary);
     }
 
 }

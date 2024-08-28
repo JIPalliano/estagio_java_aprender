@@ -1,11 +1,48 @@
 package learning_OOP;
 
-import learning_OOP.Floristry.Floor;
-import learning_OOP.Floristry.CalculatorFloor;
-import learning_OOP.Floristry.Carpet;
+import learning_OOP.Bedroom.*;
+import learning_OOP.Cicle.*;
+import learning_OOP.Floristry.*;
+import learning_OOP.Rectangle.*;
 
 public class Main {
     public static void main(String[] args){
+
+        Wall wall1 = new Wall("West");
+        Wall wall2 = new Wall("East");
+        Wall wall3 = new Wall("South");
+        Wall wall4 = new Wall("North");
+
+        Ceiling ceiling = new Ceiling(12, 55);
+
+        Bed bed = new Bed("Modern", 4, 3, 2, 1);
+
+        Lamp lamp = new Lamp("Classic", false, 75);
+
+        Bedroom bedRoom = new Bedroom("YOUR NAME HERE", wall1, wall2, wall3, wall4, ceiling,bed, lamp);
+        bedRoom.makeBed();
+
+        bedRoom.getLamp().turnOn();
+
+        Rectangle rectangle = new Rectangle(5, 10);
+        System.out.println("rectangle.width= " + rectangle.getWidth());
+        System.out.println("rectangle.length= " + rectangle.getLength());
+        System.out.println("rectangle.area= " + rectangle.getArea());
+        Cuboid cuboid = new Cuboid(5,10,5);
+        System.out.println("cuboid.width= " + cuboid.getWidth());
+        System.out.println("cuboid.length= " + cuboid.getLength());
+        System.out.println("cuboid.area= " + cuboid.getArea());
+        System.out.println("cuboid.height= " + cuboid.getHeight());
+        System.out.println("cuboid.volume= " + cuboid.getVolume());
+
+        Circle circle = new Circle(3.75);
+        System.out.println("circle.radius= " + circle.getRadius());
+        System.out.println("circle.area= " + circle.getArea());
+        Cylinder cylinder = new Cylinder(5.55, 7.25);
+        System.out.println("cylinder.radius= " + cylinder.getRadius());
+        System.out.println("cylinder.height= " + cylinder.getHeight());
+        System.out.println("cylinder.area= " + cylinder.getArea());
+        System.out.println("cylinder.volume= " + cylinder.getVolume());
 
         ComplexNumber one = new ComplexNumber(1.0, 1.0);
         ComplexNumber number = new ComplexNumber(2.5, -1.5);
@@ -30,34 +67,5 @@ public class Main {
 
         System.out.println(calculatorFloor.getTotalCost());
 
-        Point point = new Point();
-        point.setX(100);
-        point.setY(20);
-        System.out.println(point.distance());
-        System.out.println(point.distance(point));
-        System.out.println(point.distance(10, 20));
-
-        Wall wall = new Wall();
-        wall.setWidth(5);
-        wall.setHeight(10);
-
-        System.out.println(wall.getArea());
-
-        SimpleCalculator calculator = new SimpleCalculator();
-        calculator.setFirstNumber(5.0);
-        calculator.setSecondNumber(80.0);
-
-
-        System.out.println("Soma: \n"+calculator.getAdditionResult());
-        System.out.println("Substração: \n"+calculator.getSubtractionResult());
-        System.out.println("Multiplicação: \n"+calculator.getMultiplicationResult());
-        System.out.println("Divisão: \n"+calculator.getDivisionResult());
-
-        Person person = new Person();
-        person.setFirstName("9k");
-        person.setLastName("89");
-        person.setAge(1);
-
-        System.out.println("Idade é maior que 12 e menor que 20: \n"+person.isTeen()+"\nNome completo: \n"+person.getFullName());
     }
 }
