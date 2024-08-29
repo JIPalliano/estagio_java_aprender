@@ -9,6 +9,9 @@ import learning_OOP.Polymorphism.*;
 public class Main {
     public static void main(String[] args){
 
+        RomanSymbols numberRoman = RomanSymbols.valueOf("V");
+        System.out.println(numberRoman.intToRoman(10000));
+
         Car car = new Car(8, "Base car");
         car.startEngine();
         car.accelerate();
