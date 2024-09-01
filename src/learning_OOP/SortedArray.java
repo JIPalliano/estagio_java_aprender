@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class SortedArray {
-
+    protected int tezte;
     public static int[] getIntegers( int capacity){
         Scanner scanner = new Scanner(System.in);
         int[] array = new int[capacity];
