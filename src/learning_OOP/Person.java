@@ -23,9 +23,6 @@ public class Person {
         this.age = age>0 && age<100 ? 0:age;
     }
 
-    public Boolean isTeen(){
-        return age > 12 && age < 20;
-    }
 
     public String getFullName(){
         if(getFirstName().isEmpty() && getLastName().isEmpty()){
