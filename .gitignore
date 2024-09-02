@@ -2,7 +2,6 @@
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/
-src/learning_OOP/Person.java
 
 ### Eclipse ###
 .apt_generated
