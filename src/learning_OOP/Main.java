@@ -17,6 +17,7 @@ public class Main {
         mobile.addNewContact(Contact.createContact("Lucas","6543321"));
         //testando validação
         mobile.addNewContact(contact);
+        mobile.printContacts();
         System.out.println(mobile.queryContact("Ismael"));
 
 
