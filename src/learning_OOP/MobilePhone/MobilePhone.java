@@ -68,6 +68,7 @@ public class MobilePhone {
 
         int position = findContact(name);
         if (position >= 0) {
+            System.out.println("Result search:\n");
             return this.myContacts.get(position);
         }
         return null;
