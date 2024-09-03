@@ -7,5 +7,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" exported="" name="lombok" level="project" />
+    <orderEntry type="library" exported="" name="springframework.data.spring.rest.webmvc" level="project" />
   </component>
 </module>
