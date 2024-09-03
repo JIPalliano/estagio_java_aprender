@@ -9,6 +9,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args){
 
+
         Contact contact = Contact.createContact("Ismael","81823207");
         Contact contact2 = Contact.createContact("Patricia","1234856");
         MobilePhone mobile = new MobilePhone(contact.getPhoneNumber());
