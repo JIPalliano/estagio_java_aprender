@@ -2,12 +2,15 @@ package learning_OOP;
 
 
 import learning_OOP.MobilePhone.*;
+import learning_OOP.Playlist.*;
 
 import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args){
+
+        Album album = new Album("Judas", "Lady Gaga");
 
 
         Contact contact = Contact.createContact("Ismael","81823207");
