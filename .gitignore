@@ -27,3 +27,5 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+teste.txt
+.idea/libraries/springframework_data_spring_rest_webmvc.xml
