@@ -25,19 +25,17 @@ public class Main {
                 System.out.println("Digite a opção para avançar: \n");
                 input = sc.nextInt();
                 sc.nextLine();
-                if(input == 0){
-                    System.out.println("você digitou 1 \n ");
-                }
 
                 switch(input){
                     case 1:
                         System.out.println("<<<Adicionar Tarefa>>>\n Qual é a tarefa:\n");
                         tarefa = sc.nextLine();
                         listaDeTarefas.add(tarefa);
-                        sc.nextLine();
                         break;
                     case 2:
                         System.out.println("<<<Remover Tarefa>>>\n");
+                        String removerNome = sc.nextLine();
+                        listaDeTarefas.remove(removerNome);
                         break;
                     case 3:
                         System.out.println("<<<Exibir Tarefas>>>\n Lista de tarefas:");
@@ -46,6 +44,17 @@ public class Main {
                         break;
                     case 4:
                         System.out.println("<<<Buscar Tarefa>>>\n");
+                        String buscarTarefa = sc.nextLine();
+                        for(String lista: listaDeTarefas){
+                            if(lista.equals(buscarTarefa)){
+                                System.out.println(lista);
+                                break;
+                            }else{
+                                System.out.println("Valor não encontrado!");
+                                break;
+                            }
+
+                        }
                         break;
                     case 5:
                         System.out.println("opção 5");
@@ -58,6 +67,7 @@ public class Main {
 
             }catch (Exception e){
                 System.out.println("valor invalalido");
+                sc.nextLine();
             }
 
         }
