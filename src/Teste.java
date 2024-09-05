@@ -1,4 +1,4 @@
-public class Teste {
+public class Teste  implements InterfaceLearning{
     private String make;
     private String model;
     private String color;
@@ -59,4 +59,10 @@ public class Teste {
                 //model + " " +
                 //(convertible ? "convertible": ""));
     //}
+    public void learn() {
+        System.out.println("Método learn criado.");
+    }
+    public String getName(){
+        return "Método getName criado";
+    }
 }

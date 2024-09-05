@@ -1,6 +1,6 @@
 package learning_OOP;
 
-public class TesteStatic {
+public class TesteStatic{
     private String nome;
 
     public static String getNome(){
