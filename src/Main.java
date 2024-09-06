@@ -18,6 +18,7 @@ public class Main {
                 return "alou";
             }
         };
+        //teste
         innter.learn();
         System.out.println(innter.getName());
         lp.setName("ismael");
