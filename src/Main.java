@@ -7,6 +7,7 @@ import loja.*;
 public class Main {
     public static void main(String[] args) {
 
-        System.out.println("olá");
+        System.out.println(" fruta sei lá");
+        System.out.println("olá bruno, eae");
     }
 }
