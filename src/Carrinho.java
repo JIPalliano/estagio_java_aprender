@@ -5,7 +5,7 @@ import java.util.Collection;
 
 
 @Data
-public class Carrinho {
+public class Carrinho <T>{
     private String produto;
     private Integer quantidade;
     public Collection<Carrinho> carrinho = new ArrayList();
@@ -24,7 +24,7 @@ public class Carrinho {
         addItemCarrinho(carrinho);
     }
 
-    public void addItemCarrinho(Carrinho carrinho){
+    private void addItemCarrinho(Carrinho carrinho){
         this.carrinho.add(carrinho);
     }
 
@@ -35,6 +35,9 @@ public class Carrinho {
         }
     }
 
+    public void tipoProduto(Collection<? extends T> tipos){
+        System.out.println("Tipo de carrinho: " + tipos.size());
+    }
 
     @Override
     public String toString() {
