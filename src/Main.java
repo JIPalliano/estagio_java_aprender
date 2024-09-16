@@ -24,27 +24,20 @@ public class Main extends Thread{
     }
 
     public static void main(String[] args) {
-        Carrinho carrinho = new Carrinho();
-//        Scanner input = new Scanner(System.in);
-        Main main = new Main();
-        String[] x = new String[]{"abcdefgh","teste"};
-//        System.out.println();
-        long start = System.currentTimeMillis();
+        InterfaceLearning interfaceLearning = new InterfaceLearning() {
+            @Override
+            public void learn() {
 
-        //main.testeIf();
-        main.testeSwitch();
+            }
 
-        long elapsed = System.currentTimeMillis() - start;
-        //System.out.println("Elapsed time: " + elapsed + "ms");
-
-//        while (true) {
-//            String nomeProduto = input.nextLine();
-//            Integer quantidadeProduto = input.nextInt();
-//            input.nextLine();
-//            carrinho.setProduto(nomeProduto);
-//            carrinho.setQuantidade(quantidadeProduto);
-//            carrinho.criaObjeto(nomeProduto, quantidadeProduto);
-//            carrinho.print();
-//        }
+            @Override
+            public String getName() {
+                return "";
+            }
+        };
+        InterfaceLearning interfaceLearning2 = () -> System.out.println("alou");
+//        interfaceLearning2 = (InterfaceLearning) interfaceLearning;
+//        interfaceLearning2.learn();
+        System.out.println(interfaceLearning2);
     }
 }

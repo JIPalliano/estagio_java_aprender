@@ -1,4 +1,6 @@
 public interface InterfaceLearning {
-    public void learn();
-    public String getName();
+    void learn();
+    default String getName(){
+        return this.getClass().getSimpleName();
+    }
 }
