@@ -4,7 +4,9 @@ import com.sun.management.GarbageCollectionNotificationInfo;
 import learning_OOP.SortedArray;
 import loja.*;
 
-public class Main extends Thread{
+import javax.sound.midi.SysexMessage;
+
+public class Main {
 
     public void testeIf(){
         for(long i=0;i<100000000; i++){
@@ -23,56 +25,33 @@ public class Main extends Thread{
         }
     }
 
-    public static double sumNumbers(List<? extends Number> list) {
-        double sum = 0.0;
-        //list.add(5);
-        for (Number num : list) {
-            sum += num.doubleValue();
-        }
-        return sum;
-    }
-
-    public static void addNumbers(List<? super Integer> list) {
-        list.add(1);
-        list.add(2);
-        list.add(3);
-        System.out.println(list);
-    }
-
-    public static Integer addNumbers2(List<? super Integer>list){
-        list.add(1);
-        list.add(2);
-        list.add(3);
-        return list.stream().toList().size();
-    }
     public static void main(String[] args) {
-        InterfaceLearning interfaceLearning = new InterfaceLearning() {
-            @Override
-            public void learn() {
+        LinkedList<Integer> list = new LinkedList<>();
+        ArrayList<Integer> list2 = new ArrayList<>();
+        TreeSet<Integer> set = new TreeSet<>();
 
-            }
+        for (int i = 0; i < 1000000; i++) {
+            list.add(i);
+        }
+        long tempoInicial = System.currentTimeMillis();
+        //for(int i=0; i<1000000; i++ ){
+            //System.out.println(list.get(i));
+        //}
+        //list.add(500001,12);
 
-            @Override
-            public String getName() {
-                return "";
-            }
-        };
+        //for(Integer i : list){
+            //System.out.println(i);
+        //}
+        list.get(7);
+        list.indexOf(7);
+        list.stream().forEach(System.out::println);
+        //System.out.println(list.size());
 
-        List<Integer> intList = List.of(1, 2, 3);
-        List<Double> doubleList = List.of(1.5, 2.5, 3.5);
 
-        List<Number> numList = new ArrayList<>();
-        numList.add(5);
-        addNumbers(numList);
-        System.out.println(numList);
-        addNumbers2(intList);
+        //list.indexOf();
 
-        System.out.println(sumNumbers(intList));
-        System.out.println(sumNumbers(doubleList));
+        long tempoFinal =System.currentTimeMillis() - tempoInicial;
+        System.out.println("O método foi executado em " + tempoFinal+" ms");
 
-        InterfaceLearning interfaceLearning2 = () -> System.out.println("alou");
-//        interfaceLearning2 = (InterfaceLearning) interfaceLearning;
-//        interfaceLearning2.learn();
-        //System.out.println(interfaceLearning2);
     }
 }
