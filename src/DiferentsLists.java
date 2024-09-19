@@ -8,7 +8,7 @@ public class DiferentsLists {
         }
         return list;
     }
-    public static void sendAllArrayList(ArrayList<? extends Number> list){
+    public static void sendAllArrayList(ArrayList<Number> list){
         list.forEach(System.out::println);
     }
 //                Class<? extends type/objeto>
@@ -20,7 +20,7 @@ public class DiferentsLists {
         return list;
     }
 
-    public static void sendAllLinkedList(LinkedList<? extends Integer> list){
+    public static void sendAllLinkedList(LinkedList<Number> list){
         list.forEach(System.out::println);
     }
 
@@ -32,8 +32,19 @@ public class DiferentsLists {
         return list;
     }
 
-    public static void sendAllQueueLinkedList(Queue<? extends Number> list){
+    public static void sendAllQueueLinkedList(Queue<Number> list){
         list.forEach(System.out::println);
     }
 
+    public static Stack<Number> creatStackList(){
+        Stack<Number> list = new Stack<>();
+        for (int i = 0; i < 1000000; i++) {
+            list.add(i);
+        }
+        return list;
+    }
+
+    public static void sendAllStackList(Stack<Number> list){
+        list.forEach(System.out::println);
+    }
 }

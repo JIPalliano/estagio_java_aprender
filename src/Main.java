@@ -130,6 +130,8 @@ public class Main <T> {
 
 //        PasswordAuth passwordAuth = new PasswordAuth("1");
         List<Auth> list2 = new ArrayList<>();
+        Collection<String> x = new Stack<>()
+                ;
         list2.add(new PasswordAuth("6", "senha", 45));
         list2.add(new TokenAuth("6", "senha", "45", 32));
         System.out.println(list2.get(1).authenticate("password"));
