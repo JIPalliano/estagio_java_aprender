@@ -13,7 +13,13 @@ public class Cart {
     }
 
 
-    public ArrayList<Item> listItems(){
-        return items.stream().toList();
+    public void listItems(){
+        for(Item item : items){
+           String name = item.getName();
+           String discription = item.getDescription();
+           Double price = item.getPrice();
+           Boolean disponable = item.getDisponable();
+           System.out.println("Nome: "+name+"\nDescrição: "+discription+"\nPreço: "+price+"\nDisponivel: "+disponable);
+        }
     }
 }

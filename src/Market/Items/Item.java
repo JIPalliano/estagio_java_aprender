@@ -35,7 +35,7 @@ public abstract class Item {
     }
 
     public void setDisponable(String disponable) {
-        if(disponable.equals("sim")){
+        if("sim" == disponable.toLowerCase()){
             this.isDisponable = true;
         }else{
             this.isDisponable = false;
