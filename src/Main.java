@@ -124,6 +124,15 @@ public class Main <T> {
 
 
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String nome = sc.nextLine();
+        Pix pix = new Pix();
+        Pessoa pessoa = new Pessoa("ismael");
+        //pessoa.setNome(nome);
+        //pessoa.nome = "delicia";
+        String pessoaNome = pessoa.getNome();
+
+        System.out.println("Nome do delicia: \n"+pessoaNome);
 
         Auth tokenAuth = new TokenAuth("1", "banana", "senha", 45);
         tokenAuth.authenticate("token");

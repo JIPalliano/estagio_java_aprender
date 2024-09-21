@@ -38,6 +38,8 @@ public class DiferentsLists {
 
     public static Stack<Number> creatStackList(){
         Stack<Number> list = new Stack<>();
+
+
         for (int i = 0; i < 1000000; i++) {
             list.add(i);
         }
