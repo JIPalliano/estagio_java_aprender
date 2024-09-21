@@ -4,6 +4,9 @@ public class Pix extends Pagamento implements InterfaceTeste {
     private String chave;
     String qualquer = "12adev";
 
+    public Pix() {
+    }
+
     public Pix(int valor, String nome, String chave) {
         super(valor, nome);
         this.chave = chave;
