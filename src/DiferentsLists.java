@@ -1,14 +1,14 @@
 import java.util.*;
 
 public class DiferentsLists {
-    public static ArrayList<Number> creatArrayList(){
+    public static ArrayList<? super Integer> creatArrayList(){
         ArrayList<Number> list = new ArrayList<>();
         for (int i = 0; i < 1000000; i++) {
             list.add(i);
         }
         return list;
     }
-    public static void sendAllArrayList(ArrayList<Number> list){
+    public static void sendAllArrayList(ArrayList<? extends Number> list){
         list.forEach(System.out::println);
     }
 //                Class<? extends type/objeto>
@@ -47,6 +47,18 @@ public class DiferentsLists {
     }
 
     public static void sendAllStackList(Stack<Number> list){
+        list.forEach(e -> System.out.println(e));
+    }
+
+    public static Set<Number> creatSetList(){
+        Set<Number> list = new HashSet<>();
+        for (int i = 0; i < 1000000; i++) {
+            list.add(i);
+        }
+        return list;
+    }
+
+    public static void sendAllSetList(Set<Number> list){
         list.forEach(System.out::println);
     }
 }

@@ -131,57 +131,33 @@ public class Main {
         String nome = sc.nextLine();
         Pix pix = new Pix();
 
-        //Entrada da hora
-        String hora = "20:00";
-
-        //Criando um objeto de tipo DateTimeFormatter, ele vai dar o formato da hora:minutos
-        DateTimeFormatter df = DateTimeFormatter.ofPattern("HH:mm");
-
-        //Formatando a string para horas.
-        df.parse(hora);
-
-        //Validando horas, método matches contém um parâmetro que vai entender cada unidade da hora e minutos, e validar
-        //os limites.
-        if(hora.matches("^(0[9-9]|1[0-9]):[0-5][0-9]$")) {
-            System.out.println(hora);
-        }else{
-            System.out.println("horario invalido");
-        }
-//        Pessoa pessoa = new Pessoa("ismael");
-        //pessoa.setNome(nome);
-        //pessoa.nome = "delicia";
-//        String pessoaNome = pessoa.getNome();
+//        //Entrada da hora
+//        String hora = "20:00";
 //
-//        System.out.println("Nome do delicia: \n"+pessoaNome);
+//        //Criando um objeto de tipo DateTimeFormatter, ele vai dar o formato da hora:minutos
+//        DateTimeFormatter df = DateTimeFormatter.ofPattern("HH:mm");
 //
-//        Auth tokenAuth = new TokenAuth("1", "banana", "senha", 45);
-//        tokenAuth.authenticate("token");
+//        //Formatando a string para horas.
+//        df.parse(hora);
+//
+//        //Validando horas, método matches contém um parâmetro que vai entender cada unidade da hora e minutos, e validar
+//        //os limites.
+//        if(hora.matches("^(0[9-9]|1[0-9]):[0-5][0-9]$")) {
+//            System.out.println(hora);
+//        }else{
+//            System.out.println("horario invalido");
+//        }
+        ArrayList<Integer> list = new ArrayList<>();
 
-//        PasswordAuth passwordAuth = new PasswordAuth("1");
-//        List<Auth> list2 = new ArrayList<>();
-//        Collection<String> x = new Stack<>();
-//        list2.add(new PasswordAuth("6", "senha", 45));
-//        list2.add(new TokenAuth("6", "senha", "45", 32));
-//        System.out.println(list2.get(1).authenticate("password"));
-//        System.out.println(list2.get(0).authenticate("senha"));
+        long tempoInicial = System.currentTimeMillis();
 
+        DiferentsLists.creatArrayList().add(500000, 10);
+        DiferentsLists.sendAllArrayList(list);
 
-//        System.out.println(tokenAuth.getAuthentication(tokenAuth));
-//        System.out.println(passwordAuth.getAuthentication(passwordAuth));
+        DiferentsLists.creatArrayList().forEach(System.out::println);
+        DiferentsLists.creatLinkedList().forEach(System.out::println);
 
-//        ArrayList<Number> list = new ArrayList<>();
-//        list.add(Integer.parseInt("1"));
-//        list.add(Float.parseFloat("1"));
-//        list.add(Long.parseLong("1"));
-//        long tempoInicial = System.currentTimeMillis();
-
-//        DiferentsLists.creatLinkedList().add(500000, 10);
-//        DiferentsLists.sendAllArrayList(list);
-
-//        DiferentsLists.creatArrayList().forEach(System.out::println);
-//        DiferentsLists.creatLinkedList().forEach(System.out::println);
-
-//        long tempoFinal = System.currentTimeMillis() - tempoInicial;
-//        System.out.println("O método foi executado em " + tempoFinal+" ms");
+        long tempoFinal = System.currentTimeMillis() - tempoInicial;
+        System.out.println("O método foi executado em " + tempoFinal+" ms");
     }
 }
