@@ -128,7 +128,6 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        String nome = sc.nextLine();
         Pix pix = new Pix();
 
 //        //Entrada da hora
@@ -148,14 +147,18 @@ public class Main {
 //            System.out.println("horario invalido");
 //        }
         ArrayList<Integer> list = new ArrayList<>();
+        ArrayList<Integer> listinha = new ArrayList<>();
+        listinha.add(1);
+        //listinha.stream().forEach(System.out::println);
+        listinha.stream().map(e -> Optional.of(e));
 
         long tempoInicial = System.currentTimeMillis();
 
-        DiferentsLists.creatArrayList().add(500000, 10);
-        DiferentsLists.sendAllArrayList(list);
-
-        DiferentsLists.creatArrayList().forEach(System.out::println);
-        DiferentsLists.creatLinkedList().forEach(System.out::println);
+//        DiferentsLists.creatArrayList().add(500000, 10);
+//        DiferentsLists.sendAllArrayList(list);
+//
+//        DiferentsLists.creatArrayList().forEach(System.out::println);
+//        DiferentsLists.creatLinkedList().forEach(System.out::println);
 
         long tempoFinal = System.currentTimeMillis() - tempoInicial;
         System.out.println("O método foi executado em " + tempoFinal+" ms");
