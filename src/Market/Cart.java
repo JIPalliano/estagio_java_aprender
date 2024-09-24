@@ -1,25 +1,19 @@
 package Market;
 
 import Market.Items.*;
-import java.util.ArrayList;
+import learning_optional.Address;
+
+import java.util.*;
 
 public class Cart {
-    private ArrayList<Item> items;
-
-    public ArrayList<Item> addItems(Item item){
-        items = new ArrayList<>();
-        items.add(item);
+    public List<Item> addItems(List<Item> items){
         return items;
     }
 
 
-    public void listItems(){
-        for(Item item : items){
-           String name = item.getName();
-           String discription = item.getDescription();
-           Double price = item.getPrice();
-           Boolean disponable = item.getDisponable();
-           System.out.println("Nome: "+name+"\nDescrição: "+discription+"\nPreço: "+price+"\nDisponivel: "+disponable);
-        }
+    public void listItems(List<Item> items) {
+        addItems(items).stream().forEach(System.out::println);
     }
+
+
 }

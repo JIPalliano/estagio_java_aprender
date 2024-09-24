@@ -10,4 +10,9 @@ public class Table extends Item {
     public void setQuantity(Integer quantity) {
         this.quantity = quantity;
     }
+
+    @Override
+    public String toString(){
+        return getName()+" - "+getDescription()+" - "+getDisponable()+" / "+getPrice()+" -> "+getQuantity();
+    }
 }
