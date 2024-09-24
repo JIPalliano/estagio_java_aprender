@@ -1,5 +1,6 @@
 package learning_optional;
 
+import java.util.List;
 import java.util.Optional;
 
 public class Client{
@@ -30,4 +31,10 @@ public class Client{
     public static Boolean comparateAddress(String address1, String address2){
         return address1.equals(address2);
     }
+
+    public List<Client> allAddress(Client client){
+        List<Client> list = List.of(client);
+        return list;
+    }
+
 }
