@@ -11,4 +11,8 @@ public class Chair extends Item{
         this.quantity = quantity;
     }
 
+    @Override
+    public String toString(){
+        return getName()+" - "+getDescription()+" - "+getDisponable()+" / "+getPrice()+" -> "+getQuantity();
+    }
 }
