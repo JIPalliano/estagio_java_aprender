@@ -3,6 +3,7 @@ package learning_optional;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 
@@ -74,8 +75,11 @@ public class Product {
                         .groupingBy(Product::getCategory));
     }
 
-    public static List<String> listProductsNames(List<Product> products){
-        return products.stream().map(Product::getName).collect(Collectors.toList());
+    public static Set<String> listProductsNames(List<Product> products){
+        return products
+                .stream()
+                .map(Product::getName)
+                .collect(Collectors.toSet());
     }
 
     @Override

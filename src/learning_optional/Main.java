@@ -18,6 +18,7 @@ public class Main {
         Product.listProductsPriceMax(list);
         System.out.println(Product.listProductsGroupByCategory(list).get("Carne"));
         System.out.println(Product.listProductsPriceMedia(list));
+        System.out.println(Product.listProductsNames(list));
 
 //      System.out.println(client1.getName()+" - "+client1.getAddress());
 //      client1.addressExists();
