@@ -35,12 +35,7 @@ public abstract class Item {
     }
 
     public void setDisponable(String disponable) {
-        if("sim" == disponable.toLowerCase()){
-            this.isDisponable = true;
-        }else{
-            this.isDisponable = false;
-        }
-        //isDisponable = disponable;
+        this.isDisponable = "sim".equalsIgnoreCase(disponable);
     }
 
 

@@ -2,6 +2,8 @@ package Market;
 
 import Market.Items.*;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -12,6 +14,9 @@ public class Main {
         Table table = new Table();
         Cart cart = new Cart();
         Scanner input = new Scanner(System.in);
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("A");
+        LocalDateTime now = LocalDateTime.now();
+        System.out.println(dtf.format(now));
 
         while(true){
             System.out.println("Nome\n");

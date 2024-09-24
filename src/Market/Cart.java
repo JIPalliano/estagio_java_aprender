@@ -12,7 +12,7 @@ public class Cart {
 
 
     public void listItems(List<Item> items) {
-        addItems(items).stream().forEach(System.out::println);
+        addItems(items).forEach(System.out::println);
     }
 
 
