@@ -1,9 +1,10 @@
 package learning_optional;
 
-import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
+
 
 public class Product {
     private String name, category;
@@ -40,8 +41,8 @@ public class Product {
         this.price = price;
     }
 
-    public static List<Product> allProducts(List<Product> product){
-        return product;
+    public static List<Product> allProducts(List<Product> products){
+        return products;
     }
 
     public static void listProductsCategory(List<Product> products){
@@ -56,6 +57,25 @@ public class Product {
                 .stream()
                 .max(Comparator.comparing(Product::getPrice))
                 .ifPresentOrElse((e)-> System.out.println("Valor: "+e.getPrice()), () -> System.out.println("Valor não encontrado"));
+    }
+
+    public static Double listProductsPriceMedia(List<Product> products){
+        return allProducts(products)
+                .stream()
+                .mapToDouble(Product::getPrice)
+                .average()
+                .orElse(0);
+    }
+
+    public static Map<String, List<Product>> listProductsGroupByCategory(List<Product> products){
+        return products
+                .stream()
+                .collect(Collectors
+                        .groupingBy(Product::getCategory));
+    }
+
+    public static List<String> listProductsNames(List<Product> products){
+        return products.stream().map(Product::getName).collect(Collectors.toList());
     }
 
     @Override
