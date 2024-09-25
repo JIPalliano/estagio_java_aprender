@@ -1,4 +1,5 @@
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class DiferentsLists {
     public static ArrayList<? super Integer> creatArrayList(){
@@ -60,5 +61,18 @@ public class DiferentsLists {
 
     public static void sendAllSetList(Set<Number> list){
         list.forEach(System.out::println);
+    }
+
+    public static Map<Integer,Integer> creatHashMapList(){
+        Map<Integer, Integer> map = new HashMap<>();
+        for (int i = 0; i < 1000000; i++) {
+            map.put(i, i);
+        }
+        return map;
+    }
+
+    public static void sendAllHashMapList(){
+        creatHashMapList().forEach((integer, list) -> System.out.println(integer.toString()+ " : "+ list.toString()));
+        //map.forEach((integer, list) -> System.out.println(integer.toString()+ " - "+ list.stream().distinct().count()));
     }
 }
