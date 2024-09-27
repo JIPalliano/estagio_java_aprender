@@ -4,26 +4,27 @@ import java.util.stream.Collectors;
 public class DiferentsLists {
 
     //Listas
-    public static ArrayList<? super Integer> creatArrayList(ArrayList<Integer> list){
+    public static ArrayList<? super Integer> creatArrayList(ArrayList<Integer> list) {
         for (int i = 0; i < 1000000; i++) {
             list.add(i);
         }
         return list;
     }
+
     public static void sendAllArrayList(ArrayList<? extends Number> list){
         list.forEach(System.out::println);
     }
 //                Class<? extends type/objeto>
-    public static LinkedList<Integer> creatLinkedList(LinkedList<Integer> list){
-
-        for (int i = 0; i < 1000000; i++) {
+    public static LinkedList<Number> creatLinkedList(){
+        LinkedList<Number> list = new LinkedList<>();
+        for (double i = 0; i < 1000000; i++) {
             list.add(i);
         }
         return list;
     }
 
-    public static void sendAllLinkedList(LinkedList<Integer> list){
-        list.forEach(System.out::println);
+    public static void sendAllLinkedList(){
+        creatLinkedList().forEach(System.out::println);
     }
     //Queues
     public static Queue<Integer> creatQueueLinkedList(){
@@ -55,7 +56,8 @@ public class DiferentsLists {
     //Set
     public static Set<Number> creatSetList(){
         Set<Number> list = new HashSet<>();
-        for (double i = 0; i < 1000000; i++) {
+        for (int i = 0; i < 1000000; i++) {
+            list.add(i);
             list.add(i);
         }
         return list;
@@ -124,4 +126,5 @@ public class DiferentsLists {
     public static void sendAllTreeMap(){
         creatTreeMap().forEach((integer, list) -> System.out.println(integer.toString()+ " : "+ list.toString()));
     }
+
 }
