@@ -4,8 +4,9 @@ import java.util.stream.Collectors;
 public class DiferentsLists {
 
     //Listas
-    public static ArrayList<? super Integer> creatArrayList(ArrayList<Integer> list) {
-        for (int i = 0; i < 1000000; i++) {
+    public static ArrayList<? super Integer> creatArrayList() {
+        ArrayList<Integer> list = new ArrayList<>();
+        for (int i = 0; i < 10000000; i++) {
             list.add(i);
         }
         return list;
@@ -17,7 +18,7 @@ public class DiferentsLists {
 //                Class<? extends type/objeto>
     public static LinkedList<Number> creatLinkedList(){
         LinkedList<Number> list = new LinkedList<>();
-        for (double i = 0; i < 1000000; i++) {
+        for (double i = 0; i < 10000000; i++) {
             list.add(i);
         }
         return list;

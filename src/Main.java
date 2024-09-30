@@ -1,12 +1,9 @@
-import java.time.Instant;
-import java.time.LocalTime;
-import java.time.format.DateTimeFormatter;
 import java.util.*;
 
 public class Main {
 
     public static void main(String[] args) {
-        ArrayList<Integer> list = new ArrayList<>();
+        ArrayList list = DiferentsLists.creatArrayList();
 
 //        DateTimeFormatter df = DateTimeFormatter.ofPattern("HH:mm:ss");
 //
@@ -14,9 +11,12 @@ public class Main {
 //
 //        System.out.println(horaFormatada);
 
+        LinkedList<Number> list1 = DiferentsLists.creatLinkedList();
 
         long tempoInicial = System.currentTimeMillis();
 
+//        list1.add(500000, 1);
+        list.add(5000000, 2);
 //        DiferentsLists.creatArrayList(list).add(500000, 1);
 //        DiferentsLists.creatArrayList(list).get(500000);
 //        DiferentsLists.creatArrayList(list).remove(500000);
