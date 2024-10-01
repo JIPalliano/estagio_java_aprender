@@ -30,7 +30,7 @@ public class DiferentsLists {
     //Queues
     public static Queue<Integer> creatQueueLinkedList(){
         Queue<Integer> list = new LinkedList<>();
-        for (int i = 0; i < 1000000; i++) {
+        for (int i = 0; i < 10000000; i++) {
             list.add(i);
         }
         return list;
@@ -44,7 +44,7 @@ public class DiferentsLists {
         Stack<Number> list = new Stack<>();
 
 
-        for (int i = 0; i < 1000000; i++) {
+        for (int i = 0; i < 10000000; i++) {
             list.add(i);
         }
         return list;
@@ -57,7 +57,7 @@ public class DiferentsLists {
     //Set
     public static Set<Number> creatSetList(){
         Set<Number> list = new HashSet<>();
-        for (int i = 0; i < 1000000; i++) {
+        for (int i = 0; i < 10000000; i++) {
             list.add(i);
             list.add(i);
         }
@@ -68,9 +68,9 @@ public class DiferentsLists {
         creatSetList().forEach(System.out::println);
     }
 
-    public static Set<Integer> creatTreeSet(){
-        Set<Integer> set = new TreeSet<>();
-        for(int i = 0; i < 1000000; i++){
+    public static TreeSet<Integer> creatTreeSet(){
+        TreeSet<Integer> set = new TreeSet<>();
+        for(int i = 0; i < 10000000; i++){
             set.add(i);
         }
         return set;
@@ -82,7 +82,7 @@ public class DiferentsLists {
 
     public static Set<Integer> creatSetLinkedList(){
         Set<Integer> set = new LinkedHashSet<>();
-        for(int i = 0; i < 1000000; i++){
+        for(int i = 0; i < 10000000; i++){
             set.add(i);
         }
         return set;
@@ -95,7 +95,7 @@ public class DiferentsLists {
     //map
     public static Map<Integer,Integer> creatHashMapList(){
         Map<Integer, Integer> map = new HashMap<>();
-        for (int i = 0; i < 1000000; i++) {
+        for (int i = 0; i < 10000000; i++) {
             map.put(i, i);
         }
         return map;
@@ -107,7 +107,7 @@ public class DiferentsLists {
 
     public static Map<Integer, Integer> creatLinkedHashMapList(){
         Map<Integer, Integer> map = new LinkedHashMap<>();
-        for (int i = 0; i < 1000000; i++) {
+        for (int i = 0; i < 10000000; i++) {
             map.put(i, i);
         }
         return map;
@@ -118,7 +118,7 @@ public class DiferentsLists {
 
     public static Map<Integer, Integer> creatTreeMap(){
         Map<Integer, Integer> map = new TreeMap<>();
-        for (int i = 0; i < 1000000; i++) {
+        for (int i = 0; i < 10000000; i++) {
             map.put(i, i);
         }
         return map;
